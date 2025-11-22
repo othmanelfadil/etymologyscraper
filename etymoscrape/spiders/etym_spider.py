@@ -34,28 +34,6 @@ class TestSpider(scrapy.Spider):
                         "url": word_url
                     }
 
-        #SAD ATTEMPTS AT MAKING THIS SHIT WORK
-        #I KEPT THEM MOSTLY TO TEST IN THE SCRAPY SHELL 
-
-        #raw_words = response.xpath("//span[contains(@class, 'hyphens-auto')]/text()").getall()
-        #words = [stripper(w) for w in raw_words]
-        #raw_pos = response.xpath(".//span[contains(@class, 'text-battleship-gray')]/text()").get()
-        #pos = stripper(raw_pos)
-        #etym_nodes = response.xpath(".//section[contains(@class,'-mt-4')]/descendant::text()").getall()
-        #etymology = cleaner(etym_nodes)
-        #words = stripper(response.xpath("//span[contains(@class, 'hyphens-auto')]/text()").getall())
-        #pos = stripper(response.xpath("//span[contains(@class, 'text-battleship-gray')]/text()").get())
-        #etym_nodes = response.xpath("//section[contains(@class,'-mt-4')]/descendant::text()").getall()
-        #etym_text = cleaner(etym_nodes)
-    
-        #for word in words:
-            #if word:
-               #yield {
-                #"word": word,
-                #"part_of_speech": pos,
-                #"etymology" : etymology
-               #}
-
 #WE CHECK IF THE NEXT BUTTON IS ACTIVE TO STOP THE LOOP AT EXACTLY THE LAST PAGE
 #MAY NEED MORE ROBUST LOGIC SINCE THE PAGINATION IN ETYMONLINE IS FUCKING JS (MAYBE PLAYWRIGHT MIGHT BE BETTER)
 #FOR NOW WE JUST USE THIS INCREMENTAL APPROACH ON THE ETYMONLINE URL 
