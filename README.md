@@ -10,6 +10,7 @@ The results are saved in a jsonl format for readability that you can check out i
 
 ## To run the spider use this:
 `scrapy crawl etym_all -o etymology.jsonl -s JOBDIR=crawls/etym_job`
+
 *and run the exact command again to resume a crawl if needed*
 
 ## What is next?
