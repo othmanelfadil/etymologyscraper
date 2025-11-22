@@ -34,10 +34,6 @@ class TestSpider(scrapy.Spider):
                         "url": word_url
                     }
 
-
-
-
-
         #SAD ATTEMPTS AT MAKING THIS SHIT WORK
         #I KEPT THEM MOSTLY TO TEST IN THE SCRAPY SHELL 
 
